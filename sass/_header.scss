@@ -1,0 +1,48 @@
+.header {
+    // background-image: url(../img/jr-korpa-9XngoIpxcEo-unsplash.jpg);
+    background-image: linear-gradient(to bottom, transparent, $color-black-pearl),
+        url(../img/jr-korpa-9XngoIpxcEo-unsplash.jpg);
+    background-size: cover;
+    height: 600px;
+    padding-top: 5.5rem;
+    text-align: center;
+}
+
+.contact-btn-container {
+    display: flex;
+    justify-content: center;
+}
+
+.first-name {
+    color: $color-white;
+    text-shadow: 0 2rem 4rem $color-black-pearl;
+}
+
+.last-name {
+    color: $color-white;
+    text-shadow: 0 2rem 4rem $color-black-pearl;
+}
+
+.job-title {
+    font-size: 2.5rem;
+    color: cyan;
+    text-shadow: -1px -1px 0 $color-black-pearl, 1px -1px 0 $color-black-pearl, -1px 1px 0 $color-black-pearl, 1px 1px 0 $color-black-pearl;
+}
+
+.skill-icon {
+    margin: 2rem;
+    font-size: 4rem;
+    transition: transform 3s ease-in-out;
+    color: rgba($color-white, .85);
+}
+
+.code-icon {
+    font-size: 1.85rem;
+    margin: 1rem;
+    color: cyan;
+}
+
+.skill-icon:hover {
+    transform: scale(1.2) translateY(-.5px);
+    animation: shake 2s both;
+}

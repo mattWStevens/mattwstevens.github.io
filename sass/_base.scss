@@ -1,0 +1,37 @@
+// COLOR VARIABLES
+$color-indigo: #480F72;
+$color-black-pearl: #060521;
+$color-cerise: #CF3176;
+$color-violet: #8F177E;
+$color-white: #fff;
+$color-muted-cyan: #0cc7c7;
+
+// FONT VARIABLES
+$font-primary: "Open Sans";
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+body {
+    font-family: $font-primary;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: min-content min-content;
+}
+
+ion-icon {
+    color: white;
+    font-size: 32px;
+}
