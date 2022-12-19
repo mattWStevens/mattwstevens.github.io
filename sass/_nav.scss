@@ -1,0 +1,74 @@
+.nav-container {
+    background-color: rgba($color-black-pearl, .75);
+    padding: .5rem .7rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    width: 100%;
+
+    &__icon {
+        cursor: pointer;
+    }
+
+    &__icon:hover {
+        color: $color-cerise;
+    }
+}
+
+.nav {
+    height: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 1.75rem;  // TESTING ONLY REMOVE
+
+    &__item {
+        margin: 1rem;
+        overflow: hidden;
+        
+        &--resume {
+            padding: .5rem .7rem;
+            border: 1px solid $color-white;
+            position: relative;
+            border-radius: .5rem;
+            z-index: 1;
+        }
+
+        &--resume:hover::before {
+            width: 500%;
+            visibility: visible;
+        }
+
+        &--resume::before {
+            content: "Resume";
+            padding: .5rem .7rem;
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 0;
+            visibility: hidden;
+            border-radius: .5rem;
+            background-color: rgba($color-cerise, .6);
+            color: $color-white;
+            z-index: 2;
+            -webkit-clip-path: polygon(0 0, 50% 0, 25% 100%, 0 100%);
+            clip-path: polygon(0 0, 50% 0, 25% 100%, 0 100%);
+            transition: width .6s, visibility .365s;
+            cursor: pointer;
+        }
+    }
+ 
+    &__link:link,
+    &__link:visited {
+        color: $color-white;
+        text-decoration: none;
+    }
+
+    &__link--text:hover  {
+        text-shadow: -1px -1px 0 $color-cerise, 1px -1px 0 $color-cerise, -1px 1px 0 $color-cerise, 1px 1px 0 $color-cerise;
+    }
+}

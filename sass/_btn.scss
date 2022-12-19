@@ -1,0 +1,34 @@
+.btn {
+    padding: .2rem .5rem;
+    border: 1px solid cyan;
+    border-radius: .5rem;
+
+    &:hover {
+        border: 1px solid $color-white; 
+    }
+
+    &--contact {
+        font-size: 1.85rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba($color-muted-cyan, .185);
+
+        &:link,
+        &:visited {
+            color: cyan;
+            text-decoration: none;
+        }
+    }
+
+    &--contact:hover {
+        background-color: rgba($color-violet, .185);
+        color: $color-white;
+        box-shadow: 0 1rem 2rem $color-black-pearl;
+        transform: translateY(-2px);
+    }
+
+    &--contact:hover > .code-icon {
+        color: $color-white;
+    }
+}
