@@ -1,3 +1,39 @@
 .about {
     background-color: $color-black-pearl;
+    display: flex;
+
+    &__details {
+        padding: 3rem;
+        font-size: 2rem;
+        line-height: 1.8;
+        width: 50%;
+        color: $color-white;
+    }
+
+    &__img-container {
+        flex: 1;
+        position: relative;
+
+        &__overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 50rem;
+            z-index: 2;
+            transition: background-color .75s;
+            background-color: rgba($color-indigo, .6);
+            box-shadow: 0 0 8px 8px $color-black-pearl inset;
+
+            &:hover {
+                background-color: transparent;
+            }
+        }
+    }
+
+    &__personal-image {
+        width: 100%;
+        object-fit: cover;
+        height: 50rem;
+    }
 }
