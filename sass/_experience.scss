@@ -1,3 +1,41 @@
 .experience {
     background-color: $color-black-pearl;
+    padding: 3rem;
+    color: $color-white;
+
+    &__content {
+        height: 50rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__item {
+        height: 100%;
+        flex: 1;
+        padding: 3rem;
+        background-color: $color-indigo;    // CHANGE THIS.
+
+        &__info {
+            font-size: 1.65rem;
+        }
+
+        &__list {
+            font-size: 1.65rem;
+        }
+    }
+
+    &__page-number {
+        text-align: center;
+        font-size: 2rem;
+    }
+}
+
+.arrow-icon {
+    padding: 2rem;
+    cursor: pointer;
+}
+
+ul {
+    padding: 0 2.5rem;
 }

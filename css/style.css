@@ -10,7 +10,8 @@ html {
   font-size: 62.5%; }
 
 body {
-  font-family: "Open Sans"; }
+  font-family: "Open Sans";
+  background-color: #060521; }
 
 .container {
   display: grid;
@@ -86,7 +87,33 @@ ion-icon {
   background-color: #060521; }
 
 .experience {
-  background-color: #060521; }
+  background-color: #060521;
+  padding: 3rem;
+  color: #fff; }
+  .experience__content {
+    height: 50rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+  .experience__item {
+    height: 100%;
+    flex: 1;
+    padding: 3rem;
+    background-color: #480F72; }
+    .experience__item__info {
+      font-size: 1.65rem; }
+    .experience__item__list {
+      font-size: 1.65rem; }
+  .experience__page-number {
+    text-align: center;
+    font-size: 2rem; }
+
+.arrow-icon {
+  padding: 2rem;
+  cursor: pointer; }
+
+ul {
+  padding: 0 2.5rem; }
 
 .contact {
   background-color: #060521;
@@ -137,6 +164,9 @@ ion-icon {
 .heading--2 {
   font-size: 5rem;
   text-transform: uppercase; }
+
+.heading--3 {
+  font-size: 2.5rem; }
 
 .nav-container {
   background-color: rgba(6, 5, 33, 0.75);
