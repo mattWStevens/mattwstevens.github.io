@@ -10,11 +10,29 @@
         align-items: center;
     }
 
+    &__button {
+        background-color: transparent;
+        border: none;
+    }
+
     &__item {
         height: 100%;
         flex: 1;
         padding: 3rem;
-        background-color: $color-indigo;    // CHANGE THIS.
+        border: 1px solid $color-muted-cyan;
+        border-radius: 4px;
+
+        &--1 {
+            visibility: visible;
+        }
+
+        &--2 {
+            visibility: hidden;
+        }
+
+        &--3 {
+            visibility: hidden;
+        }
 
         &__info {
             font-size: 1.65rem;
@@ -34,6 +52,16 @@
 .arrow-icon {
     padding: 2rem;
     cursor: pointer;
+
+    &:hover {
+        transform: translateY(-2px);
+        color: $color-cerise;
+    }
+
+    &:active {
+        transform: translateY(-.5px);
+        color: $color-white;
+    }
 }
 
 ul {

@@ -95,11 +95,21 @@ ion-icon {
     display: flex;
     justify-content: space-between;
     align-items: center; }
+  .experience__button {
+    background-color: transparent;
+    border: none; }
   .experience__item {
     height: 100%;
     flex: 1;
     padding: 3rem;
-    background-color: #480F72; }
+    border: 1px solid #0cc7c7;
+    border-radius: 4px; }
+    .experience__item--1 {
+      visibility: visible; }
+    .experience__item--2 {
+      visibility: hidden; }
+    .experience__item--3 {
+      visibility: hidden; }
     .experience__item__info {
       font-size: 1.65rem; }
     .experience__item__list {
@@ -111,6 +121,12 @@ ion-icon {
 .arrow-icon {
   padding: 2rem;
   cursor: pointer; }
+  .arrow-icon:hover {
+    transform: translateY(-2px);
+    color: #CF3176; }
+  .arrow-icon:active {
+    transform: translateY(-0.5px);
+    color: #fff; }
 
 ul {
   padding: 0 2.5rem; }
