@@ -21,17 +21,19 @@
         padding: 3rem;
         border: 1px solid $color-muted-cyan;
         border-radius: 4px;
+        background: linear-gradient(to right, transparent 33%, $color-muted-cyan, transparent 66%);
+        background-size: 300% 100%, cover;
 
         &--1 {
-            visibility: visible;
+            display: block;
         }
 
         &--2 {
-            visibility: hidden;
+            display: none;
         }
 
         &--3 {
-            visibility: hidden;
+            display: none;
         }
 
         &__info {
@@ -66,4 +68,13 @@
 
 ul {
     padding: 0 2.5rem;
+}
+
+.link-button {
+    text-decoration: none;
+    color: $color-muted-cyan;
+
+    &:hover {
+        text-decoration: underline;
+    }
 }

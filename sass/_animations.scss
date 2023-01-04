@@ -1,17 +1,39 @@
 @keyframes shake {
-    10%, 90% {
-      transform: translate3d(-1px, 0, 0);
-    }
-  
-    20%, 80% {
-      transform: translate3d(2px, 0, 0);
-    }
-  
-    30%, 50%, 70% {
-      transform: translate3d(-3px, 0, 0);
-    }
-  
-    40%, 60% {
-      transform: translate3d(3px, 0, 0);
-    }
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
   }
+
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-3px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(3px, 0, 0);
+  }
+}
+
+@keyframes change {
+  from {
+    background-position: right, center;
+  }
+}
+
+@keyframes fadeIn {
+  0% { color: rgba($color-muted-cyan, .002); }
+  25% { color: rgba($color-muted-cyan, .1); }
+  50% { color: rgba($color-muted-cyan, .35); }
+  75% { color: rgba($color-muted-cyan, .5); }
+  100% { color: rgba($color-white, 1); }
+}
+
+@keyframes fadeInLink {
+  0% { color: rgba($color-muted-cyan, .002); }
+  25% { color: rgba($color-muted-cyan, .1); }
+  50% { color: rgba($color-muted-cyan, .35); }
+  75% { color: rgba($color-muted-cyan, .5); }
+  100% { color: rgba($color-muted-cyan, 1); }
+}
