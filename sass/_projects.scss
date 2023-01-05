@@ -1,3 +1,17 @@
 .projects {
     background-color: $color-black-pearl;
+    padding: 3rem;
+    color: $color-white;
+
+    &__card-container {
+        display: grid;
+        padding: 5rem;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 8rem;
+    }
+
+    &__card {
+        background-color: $color-indigo;    // Placeholder.
+        height: 20rem; 
+    }
 }

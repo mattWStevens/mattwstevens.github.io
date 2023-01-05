@@ -112,7 +112,17 @@ ion-icon {
     color: #fff; }
 
 .projects {
-  background-color: #060521; }
+  background-color: #060521;
+  padding: 3rem;
+  color: #fff; }
+  .projects__card-container {
+    display: grid;
+    padding: 5rem;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 8rem; }
+  .projects__card {
+    background-color: #480F72;
+    height: 20rem; }
 
 .experience {
   background-color: #060521;
