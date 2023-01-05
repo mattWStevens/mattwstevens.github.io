@@ -10,7 +10,8 @@ html {
   font-size: 62.5%; }
 
 body {
-  font-family: "Open Sans"; }
+  font-family: "Open Sans";
+  background-color: #060521; }
 
 .container {
   display: grid;
@@ -29,6 +30,34 @@ ion-icon {
     transform: translate3d(-3px, 0, 0); }
   40%, 60% {
     transform: translate3d(3px, 0, 0); } }
+
+@keyframes change {
+  from {
+    background-position: right, center; } }
+
+@keyframes fadeIn {
+  0% {
+    color: rgba(12, 199, 199, 0.002); }
+  25% {
+    color: rgba(12, 199, 199, 0.1); }
+  50% {
+    color: rgba(12, 199, 199, 0.35); }
+  75% {
+    color: rgba(12, 199, 199, 0.5); }
+  100% {
+    color: white; } }
+
+@keyframes fadeInLink {
+  0% {
+    color: rgba(12, 199, 199, 0.002); }
+  25% {
+    color: rgba(12, 199, 199, 0.1); }
+  50% {
+    color: rgba(12, 199, 199, 0.35); }
+  75% {
+    color: rgba(12, 199, 199, 0.5); }
+  100% {
+    color: #0cc7c7; } }
 
 .about {
   background-color: #060521;
@@ -86,7 +115,57 @@ ion-icon {
   background-color: #060521; }
 
 .experience {
-  background-color: #060521; }
+  background-color: #060521;
+  padding: 3rem;
+  color: #fff; }
+  .experience__content {
+    height: 50rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+  .experience__button {
+    background-color: transparent;
+    border: none; }
+  .experience__item {
+    height: 100%;
+    flex: 1;
+    padding: 3rem;
+    border: 1px solid #0cc7c7;
+    border-radius: 4px;
+    background: linear-gradient(to right, transparent 33%, #0cc7c7, transparent 66%);
+    background-size: 300% 100%, cover; }
+    .experience__item--1 {
+      display: block; }
+    .experience__item--2 {
+      display: none; }
+    .experience__item--3 {
+      display: none; }
+    .experience__item__info {
+      font-size: 1.65rem; }
+    .experience__item__list {
+      font-size: 1.65rem; }
+  .experience__page-number {
+    text-align: center;
+    font-size: 2rem; }
+
+.arrow-icon {
+  padding: 2rem;
+  cursor: pointer; }
+  .arrow-icon:hover {
+    transform: translateY(-2px);
+    color: #CF3176; }
+  .arrow-icon:active {
+    transform: translateY(-0.5px);
+    color: #fff; }
+
+ul {
+  padding: 0 2.5rem; }
+
+.link-button {
+  text-decoration: none;
+  color: #0cc7c7; }
+  .link-button:hover {
+    text-decoration: underline; }
 
 .contact {
   background-color: #060521;
@@ -137,6 +216,9 @@ ion-icon {
 .heading--2 {
   font-size: 5rem;
   text-transform: uppercase; }
+
+.heading--3 {
+  font-size: 2.5rem; }
 
 .nav-container {
   background-color: rgba(6, 5, 33, 0.75);

@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <link rel="stylesheet" href="css/style.css">
+    <script src="main.js"></script>
 
     <title>Matthew Stevens</title>
 </head>
@@ -16,7 +17,7 @@
         <ion-icon name="hardware-chip-outline" class="nav-container__icon"></ion-icon>
         <ul class="nav">
             <li class="nav__item"><a href="#about_me" class="nav__link nav__link--text">About Me</a></li>
-            <li class="nav__item"><a href="#" class="nav__link nav__link--text">Experience</a></li>
+            <li class="nav__item"><a href="#experience" class="nav__link nav__link--text">Experience</a></li>
             <li class="nav__item"><a href="#" class="nav__link nav__link--text">Projects</a></li>
             <li class="nav__item"><a href="#" class="nav__link nav__link--text">Contact Me</a></li>
             <li class="nav__item nav__item--resume"><a href="#" class="nav__link">Resume</a></li>
@@ -61,7 +62,150 @@
             <div class="about__img-container__overlay"></div>
         </div>
     </div>
-    <div class="experience">Experience</div>
+    <div class="experience u-margin-top-large" id="experience">
+        <h2 class="heading--2">Experience</h2>
+
+        <div class="experience__content u-margin-top-medium">
+            <button class="experience__button" onclick="navigateExperience('back')">
+                <ion-icon name="chevron-back-outline" class="arrow-icon"></ion-icon>
+            </button>
+            <div class="experience__item experience__item--1">
+                <div class="experience__item-text-container">
+                    <h3 class="heading--3" style="text-decoration: underline;">
+                        Evernorth | Cigna: January 2020 - Present
+                    </h3>
+
+                    <p class="experience__item__info u-margin-top-small">
+                        Part of the Technology Early Career Development Program and have had the opportunity to work
+                        with a variety of current and emerging technologies.
+                    </p>
+
+                    <ul class="experience__item__list u-margin-top-small">
+                        <li>
+                            Implemented numerous Java Springboot micro services from start to finish - including setting
+                            up the initial repositories, implementing the business logic (after having reverse engineered
+                            it from the old service's BPEL logic), adding unit tests, performance tests, regression tests,
+                            logging, configuring the CI/CD pipelines for the applications, and ultimately deploying them
+                            on OpenShift 4
+                        </li>
+                        <li>
+                            Worked to continuously improve as well as maintain the existing microservices through
+                            maintaining detailed technical documentation, fixing defects from testing, as well as
+                            streamlining the process of passing headers between the applications, resulting in cleaner
+                            as well as less redundant code
+                        </li>
+                        <li>
+                            Worked on utilizing Jenkins to create pipelines to automate our deployments to OpenShift 4
+                            with stages for unit tests, linting, archiving of test result artifacts, and manual deployment
+                            options for DEV, SYS, INT, as well as PVS environments that are integrated with GitHub
+                            repositories via web hook
+                        </li>
+                        <li>
+                            Built competitive intelligence tool with React featuring complex unit cost analysis
+                            functionality
+                            <ul>
+                                <li>
+                                    Features dynamically generated page based upon raw plans chosen for comparison where
+                                    the user can change rate methodologies and provide input for gap assumption values,
+                                    which updates the summary grid in real-time without additional API calls
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            Worked to deliver a MVP project to production on the AWS Public Cloud as an Angular engineer
+                            <ul>
+                                <li>
+                                    Contributed to an inner-sourced Angular library that was utilized extensively
+                                    throughout the application by building out a custom charting/graphing component
+                                    built upon the Chart.js library
+                                </li>
+                                <li>
+                                    Built numerous complex reusable components/widgets utilized throughout the
+                                    application
+                                </li>
+                                <li>
+                                    Built a custom tooltip for the charting component that was able to display custom
+                                    information for each data point and route to other pages on click while populating
+                                    the next page with its associated information
+                                </li>
+                                <li>
+                                    Worked with reactive forms, API integration, http handling, implemented unit tests,
+                                    worked with lazy loading of data, worked with behavior subjects/observables
+                                </li>
+                                <li>Helped to guide key business decisions by providing my technical insight</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="experience__item experience__item--2">
+                <div class="experience__item-text-container">
+                    <h3 class="heading--3" style="text-decoration: underline;">
+                        iDevices | Hubbell: May 2019 - August 2019
+                    </h3>
+
+                    <p class="experience__item__info u-margin-top-small">
+                        Developed and added new features in a Scaled Agile Framework environment for iDevice’s smart
+                        home products Connected app as well as the Amazon Alexa Instinct Switch app available on the
+                        Google Play Store and the Apple App Store.
+                    </p>
+
+                    <ul class="experience__item__list u-margin-top-small">
+                        <li>
+                            Made the new Amazon Alexa Instinct Switch app accessible for the visually impaired via
+                            integrating Android TalkBack services as well as custom features
+                        </li>
+                        <li>
+                            Rewrote the error handling classes to be more efficient and robust as well as created an
+                            error management class to control the different kinds of errors and dynamically alert the
+                            user in an easily understandable and friendly manner
+                        </li>
+                        <li>
+                            Rewrote the permissions and enablement management class to appropriately handle obtaining
+                            permissions from the users without overlapping permissions on all Android operating systems 
+                            versions 5.1 and up
+                        </li>
+                        <li>
+                            Optimized both the Connected and Switch apps for Android operating systems Lollipop,
+                            Marshmallow, Nougat, Oreo, and Pie on a multitude of different-sized devices
+                        </li>
+                        <li>
+                            Fixed bugs reported by management as well as users leading to a reduction in app crashes as
+                            well as a better user experience
+                        </li>
+                        <li>
+                            Implemented fade-in animations to the dashboard tutorial screens of the Amazon Alexa
+                            Instinct Switch App
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="experience__item experience__item--3">
+                <div class="experience__item-text-container">
+                    <h3 class="heading--3" style="text-decoration: underline;">
+                        F3 Technology Partners: May 2018 - September 2018
+                    </h3>
+
+                    <p class="experience__item__info u-margin-top-small">
+                        Developed numerous operating system configurations and performance
+                        data extractions, formatting, and graphing utilities using Python, Bash,
+                        AWK, vim syntax editor, batch Libre Office, and gnuplot for Linux, AIX, Solaris and other
+                        environments.
+                    </p>
+
+                    <p class="experience__item__info u-margin-top-small">
+                        A sample of some of the scripts I wrote for F3 Technology Partners can be found on my
+                        <a class="link-button" href="https://github.com/mattWStevens/F3_WORK" target="_blank">GitHub</a>
+                        account.
+                    </p>
+                </div>
+            </div>
+            <button class="experience__button" onclick="navigateExperience('forward')">
+                <ion-icon name="chevron-forward-outline" class="arrow-icon"></ion-icon>
+            </button>
+        </div>
+        <div class="experience__page-number u-margin-top-medium" id="experienceNavNumber">1/3</div>
+    </div>
     <div class="projects">Projects</div>
     <footer class="contact">Contact</footer>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
