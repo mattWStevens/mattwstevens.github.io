@@ -272,6 +272,8 @@ ul {
       transition: width .6s, visibility .365s;
       cursor: pointer; }
   .nav__link:link, .nav__link:visited {
+    position: relative;
+    z-index: 10;
     color: #fff;
     text-decoration: none; }
   .nav__link--text:hover {

@@ -65,6 +65,8 @@
  
     &__link:link,
     &__link:visited {
+        position: relative;
+        z-index: 10;
         color: $color-white;
         text-decoration: none;
     }
