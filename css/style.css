@@ -118,11 +118,11 @@ ion-icon {
   .projects__card-container {
     display: grid;
     padding: 5rem;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 8rem; }
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    grid-gap: 4rem; }
   .projects__card {
     background-color: #480F72;
-    height: 20rem; }
+    height: 22rem; }
 
 .experience {
   background-color: #060521;
