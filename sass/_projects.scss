@@ -11,8 +11,41 @@
     
     }
 
-    &__card {
+    &__card {    // background-color: #390c5a;    // Placeholder.
         background-color: $color-indigo;    // Placeholder.
         height: 22rem;
+        border-radius: 5px;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        &-text {
+            font-size: 1.3rem;
+        }
+
+        &-tech-info {
+            display: flex;
+            font-size: 1.15rem;
+            justify-content: flex-end;
+            align-items: center;
+            margin-top: 1.2rem;
+            color: cyan;
+            font-weight: bold;
+        }
     }
+}
+
+.git-icon {
+    font-size: 2rem;
+    margin-left: 1rem;
+
+    &:hover {
+        color: $color-cerise;
+        transform: translateY(-1px);
+    }
+}
+
+.tech-skill {
+    margin-left: 1rem;
 }

@@ -122,7 +122,32 @@ ion-icon {
     grid-gap: 4rem; }
   .projects__card {
     background-color: #480F72;
-    height: 22rem; }
+    height: 22rem;
+    border-radius: 5px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; }
+    .projects__card-text {
+      font-size: 1.3rem; }
+    .projects__card-tech-info {
+      display: flex;
+      font-size: 1.15rem;
+      justify-content: flex-end;
+      align-items: center;
+      margin-top: 1.2rem;
+      color: cyan;
+      font-weight: bold; }
+
+.git-icon {
+  font-size: 2rem;
+  margin-left: 1rem; }
+  .git-icon:hover {
+    color: #CF3176;
+    transform: translateY(-1px); }
+
+.tech-skill {
+  margin-left: 1rem; }
 
 .experience {
   background-color: #060521;
@@ -288,6 +313,9 @@ ul {
     text-decoration: none; }
   .nav__link--text:hover {
     text-shadow: -1px -1px 0 #CF3176, 1px -1px 0 #CF3176, -1px 1px 0 #CF3176, 1px 1px 0 #CF3176; }
+
+.u-margin-top-extra-small {
+  margin-top: .8rem; }
 
 .u-margin-top-small {
   margin-top: 1.2rem; }
