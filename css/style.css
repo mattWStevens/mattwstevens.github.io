@@ -210,7 +210,8 @@ ul {
 
 .contact {
   background-color: #060521;
-  height: 1000px; }
+  padding: 3rem;
+  color: #fff; }
 
 .header {
   background-image: linear-gradient(to bottom, transparent, #060521), url(../img/jr-korpa-9XngoIpxcEo-unsplash.jpg);
