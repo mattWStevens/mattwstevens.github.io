@@ -19,6 +19,11 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        transition: transform .65s;
+
+        &:hover {
+            transform: translateY(-1rem);
+        }
 
         &-text {
             font-size: 1.3rem;
@@ -44,6 +49,10 @@
         color: $color-cerise;
         transform: translateY(-1px);
     }
+}
+
+.folder-icon {
+    margin-right: auto;
 }
 
 .tech-skill {

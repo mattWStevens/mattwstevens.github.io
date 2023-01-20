@@ -127,7 +127,10 @@ ion-icon {
     padding: 2rem;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; }
+    justify-content: space-between;
+    transition: transform .65s; }
+    .projects__card:hover {
+      transform: translateY(-1rem); }
     .projects__card-text {
       font-size: 1.3rem; }
     .projects__card-tech-info {
@@ -145,6 +148,9 @@ ion-icon {
   .git-icon:hover {
     color: #CF3176;
     transform: translateY(-1px); }
+
+.folder-icon {
+  margin-right: auto; }
 
 .tech-skill {
   margin-left: 1rem; }
