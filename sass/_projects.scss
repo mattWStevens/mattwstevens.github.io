@@ -1,3 +1,60 @@
 .projects {
     background-color: $color-black-pearl;
+    padding: 3rem;
+    color: $color-white;
+
+    &__card-container {
+        display: grid;
+        padding: 5rem;
+        grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+        grid-gap: 4rem;
+    
+    }
+
+    &__card {
+        background-color: $color-indigo;
+        height: 22rem;
+        border-radius: 5px;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        transition: transform .65s;
+
+        &:hover {
+            transform: translateY(-1rem);
+        }
+
+        &-text {
+            font-size: 1.3rem;
+        }
+
+        &-tech-info {
+            display: flex;
+            font-size: 1.15rem;
+            justify-content: flex-end;
+            align-items: center;
+            margin-top: 1.2rem;
+            color: cyan;
+            font-weight: bold;
+        }
+    }
+}
+
+.git-icon {
+    font-size: 2rem;
+    margin-left: 1rem;
+
+    &:hover {
+        color: $color-cerise;
+        transform: translateY(-1px);
+    }
+}
+
+.folder-icon {
+    margin-right: auto;
+}
+
+.tech-skill {
+    margin-left: 1rem;
 }
