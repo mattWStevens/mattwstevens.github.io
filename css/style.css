@@ -212,6 +212,62 @@ ul {
   background-color: #060521;
   padding: 3rem;
   color: #fff; }
+  .contact__container {
+    display: flex; }
+  .contact__title-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: .5 auto; }
+  .contact__info {
+    font-size: 2rem; }
+  .contact__info-item, .contact__info-item:link, .contact__info-item:visited {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #fff; }
+    .contact__info-item:hover, .contact__info-item:link:hover, .contact__info-item:visited:hover {
+      color: #CF3176;
+      cursor: pointer; }
+    .contact__info-item:not(:last-child), .contact__info-item:link:not(:last-child), .contact__info-item:visited:not(:last-child) {
+      margin-bottom: 1.2rem; }
+  .contact__form {
+    padding-top: 5rem;
+    flex: .5 auto; }
+    .contact__form-label {
+      display: block;
+      font-size: 2rem;
+      margin-bottom: 1.2rem; }
+    .contact__form-input-container {
+      position: relative;
+      margin-bottom: 4rem; }
+    .contact__form-input {
+      font-size: 1.5rem;
+      font-family: inherit;
+      color: black;
+      padding: 1rem 1.5rem;
+      border-radius: 2px;
+      border: none;
+      border-bottom: 3px solid transparent;
+      width: 65%;
+      padding-left: 3.75rem;
+      display: block; }
+      .contact__form-input:focus {
+        outline: none; }
+
+.input-icon {
+  position: absolute;
+  color: black;
+  font-size: 3rem;
+  top: 4.5px;
+  left: 2px; }
+
+.contact-icon {
+  margin-right: 1.2rem;
+  font-size: 2rem; }
+
+.contact__info-item:hover .contact-icon {
+  color: #CF3176; }
 
 .header {
   background-image: linear-gradient(to bottom, transparent, #060521), url(../img/jr-korpa-9XngoIpxcEo-unsplash.jpg);

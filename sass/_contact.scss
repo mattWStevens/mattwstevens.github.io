@@ -2,4 +2,88 @@
     background-color: $color-black-pearl;
     padding: 3rem;
     color: $color-white;
+
+    &__container {
+        display: flex;
+    }
+
+    &__title-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex: .5 auto;
+    }
+
+    &__info {
+        font-size: 2rem;
+    }
+
+    &__info-item,
+    &__info-item:link,
+    &__info-item:visited {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: $color-white;
+
+        &:hover {
+            color: $color-cerise;
+            cursor: pointer;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 1.2rem;
+        }
+    }
+
+    &__form {
+        padding-top: 5rem;
+        flex: .5 auto;
+
+        &-label {
+            display: block;
+            font-size: 2rem;
+            margin-bottom: 1.2rem;
+        }
+
+        &-input-container {
+            position: relative;
+            margin-bottom: 4rem;
+        }
+
+        &-input {
+            font-size: 1.5rem;
+            font-family: inherit;
+            color: black;
+            padding: 1rem 1.5rem;
+            border-radius: 2px;
+            border: none;
+            border-bottom: 3px solid transparent;
+            width: 65%;
+            padding-left: 3.75rem;
+            display: block;
+
+            &:focus {
+                outline: none;
+
+            }
+        }
+    }
+}
+
+.input-icon {
+    position: absolute;
+    color: black;
+    font-size: 3rem;
+    top: 4.5px;
+    left: 2px;
+}
+
+.contact-icon {
+    margin-right: 1.2rem;
+    font-size: 2rem;
+}
+
+.contact__info-item:hover .contact-icon {
+    color: $color-cerise;
 }
