@@ -100,14 +100,24 @@ ion-icon {
     justify-content: center;
     align-items: center;
     background-color: rgba(12, 199, 199, 0.185); }
+    .btn--contact-bottom {
+      background-color: #8F177E;
+      font-size: 1.65rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      border: 1px solid #fff; }
     .btn--contact:link, .btn--contact:visited {
       color: cyan;
       text-decoration: none; }
-  .btn--contact:hover {
-    background-color: rgba(143, 23, 126, 0.185);
+  .btn--contact:hover, .btn--contact-bottom:hover {
     color: #fff;
     box-shadow: 0 1rem 2rem #060521;
-    transform: translateY(-2px); }
+    transform: translateY(-2px);
+    cursor: pointer; }
+  .btn--contact:hover {
+    background-color: rgba(143, 23, 126, 0.185); }
   .btn--contact:hover > .code-icon {
     color: #fff; }
 
@@ -217,7 +227,7 @@ ul {
   .contact__title-info {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     flex: .5 auto; }
   .contact__info {
     font-size: 2rem; }
