@@ -347,7 +347,7 @@
                 </div>
             </div>
             <div class="contact__form">
-                <form>
+                <form id="ContactForm">
                     <label for="name" class="contact__form-label">Name</label>
                     <div class="contact__form-input-container">
                         <ion-icon name="person-circle-outline" class="input-icon"></ion-icon>
@@ -369,10 +369,10 @@
                     <label for="message" class="contact__form-label">Message</label>
                     <div class="contact__form-input-container">
                         <ion-icon name="chatbox-ellipses-outline" class="input-icon"></ion-icon>
-                        <textarea name="message" cols="40" rows="5" class="contact__form-input"></textarea>
+                        <textarea name="message" id="message" cols="40" rows="5" class="contact__form-input"></textarea>
                     </div>
 
-                    <button href="#contact" class="btn btn--contact-bottom">
+                    <button href="#contact" class="btn btn--contact-bottom" onclick="handleSubmit()">
                         <ion-icon name="code-outline" class="code-icon" style="color: white"></ion-icon>
                         Connect
                         <ion-icon name="code-slash-outline" class="code-icon" style="color: white"></ion-icon>

@@ -279,6 +279,10 @@ ul {
 .contact__info-item:hover .contact-icon {
   color: #CF3176; }
 
+.error-state {
+  background-color: rgba(255, 0, 0, 0.185);
+  border: 1px solid red; }
+
 .header {
   background-image: linear-gradient(to bottom, transparent, #060521), url(../img/jr-korpa-9XngoIpxcEo-unsplash.jpg);
   background-size: cover;

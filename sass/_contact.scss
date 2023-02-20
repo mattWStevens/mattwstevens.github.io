@@ -86,3 +86,8 @@
 .contact__info-item:hover .contact-icon {
     color: $color-cerise;
 }
+
+.error-state {
+    background-color: rgba(red, .185);
+    border: 1px solid red;
+}

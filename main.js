@@ -33,3 +33,30 @@ function navigateExperience(direction) {
         }
     }
 }
+
+function handleSubmit() {
+    // Get form values.
+    const form = document.forms.ContactForm;
+    const formData = new FormData(form);
+    const name = formData.get('name');
+    const email = formData.get('email');
+    const subject = formData.get('subject');
+    const message = formData.get('message');
+
+    if (!name || !subject || !message) {
+        const idList = [];
+        if (!name) { idList.push('name'); }
+        if (!subject) { idList.push('subject'); }
+        if (!message) { idList.push('message'); }
+
+        for (const id of idList) {
+            const el = document.getElementById(id);
+            if (el) {
+                el.classList.add('error-state');
+                // Will also need logic to make icon and text white so they stand out.
+            }
+        }
+    }
+
+    // EMAIL REGEX logic
+}
