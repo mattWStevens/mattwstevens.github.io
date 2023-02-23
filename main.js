@@ -43,20 +43,30 @@ function handleSubmit() {
     const subject = formData.get('subject');
     const message = formData.get('message');
 
-    if (!name || !subject || !message) {
-        const idList = [];
-        if (!name) { idList.push('name'); }
-        if (!subject) { idList.push('subject'); }
-        if (!message) { idList.push('message'); }
-
-        for (const id of idList) {
-            const el = document.getElementById(id);
-            if (el) {
-                el.classList.add('error-state');
-                // Will also need logic to make icon and text white so they stand out.
-            }
+    const idList = [];
+    if (!name) { idList.push('name'); }
+    if (!subject) { idList.push('subject'); }
+    if (!message) { idList.push('message'); }
+    if (!email) { idList.push('email'); }
+    else if (email) {
+        const regex = new RegExp(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/);
+        if (!regex.test(email)) {
+            idList.push('email');
         }
     }
 
-    // EMAIL REGEX logic
+    applyErrorStyles(idList);
+}
+
+function applyErrorStyles(idList) {
+    for (const id of idList) {
+        const el = document.getElementById(id);
+        if (el) {
+            el.classList.add('error-state');
+            const container = el.parentElement;
+            if (container) {
+                container.firstElementChild.style.color = 'white';
+            }
+        }
+    }
 }
