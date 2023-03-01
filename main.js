@@ -83,3 +83,9 @@ function applyErrorStyles(idList, error) {
         }
     }
 }
+
+function sendEmail() {
+    // https://dashboard.emailjs.com/admin
+    // https://www.emailjs.com/docs/sdk/send/
+    // Use this site for creating email.
+}
