@@ -34,16 +34,16 @@ function navigateExperience(direction) {
     }
 }
 
-function handleSubmit() {
+function handleSubmit(formValue) {
     // Get form values.
     const form = document.forms.ContactForm;
     const formData = new FormData(form);
-    const name = formData.get('name');
+    const name = formData.get('name').trim();
     const email = formData.get('email');
-    const subject = formData.get('subject');
-    const message = formData.get('message');
+    const subject = formData.get('subject').trim();
+    const message = formData.get('message').trim();
 
-    const idList = [];
+    let idList = [];
     if (!name) { idList.push('name'); }
     if (!subject) { idList.push('subject'); }
     if (!message) { idList.push('message'); }
@@ -55,17 +55,30 @@ function handleSubmit() {
         }
     }
 
-    applyErrorStyles(idList);
+    // If formValue is supplied, it means we are only looking at the current
+    // form input on change.  
+    if (formValue) {
+        idList = idList.includes(formValue) ? idList.filter(val => val === formValue) : [];
+
+        // Remove error styling if user fixed mistake.
+        if (!idList.length) {
+            applyErrorStyles([formValue], false);
+        }
+    }
+
+    applyErrorStyles(idList, true);
 }
 
-function applyErrorStyles(idList) {
+function applyErrorStyles(idList, error) {
     for (const id of idList) {
         const el = document.getElementById(id);
         if (el) {
-            el.classList.add('error-state');
+            if (error) { el.classList.add('error-state'); }
+            else { el.classList.remove('error-state'); }
+
             const container = el.parentElement;
             if (container) {
-                container.firstElementChild.style.color = 'white';
+                container.firstElementChild.style.color = error ? 'white' : '';
             }
         }
     }

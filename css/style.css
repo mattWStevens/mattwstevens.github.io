@@ -281,7 +281,8 @@ ul {
 
 .error-state {
   background-color: rgba(255, 0, 0, 0.185);
-  border: 1px solid red; }
+  border: 1px solid red;
+  color: #fff; }
 
 .header {
   background-image: linear-gradient(to bottom, transparent, #060521), url(../img/jr-korpa-9XngoIpxcEo-unsplash.jpg);
