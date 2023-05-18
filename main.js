@@ -66,6 +66,11 @@ function handleSubmit(formValue) {
         }
     }
 
+    if (!idList.length && !formValue) {
+        sendEmail(name, subject, email, message);
+        return;
+    }
+
     applyErrorStyles(idList, true);
 }
 
@@ -84,8 +89,22 @@ function applyErrorStyles(idList, error) {
     }
 }
 
-function sendEmail() {
-    // https://dashboard.emailjs.com/admin
-    // https://www.emailjs.com/docs/sdk/send/
-    // Use this site for creating email.
+function sendEmail(name, subject, email, message) {
+    const form = document.forms.ContactForm;
+
+    var templateParams = {
+        subject: subject,
+        from_name: name,
+        message: `You can contact ${name} via ${email}, here is their message:\n\n${message}`
+    };
+
+    emailjs.send('service_0qd9lv2', 'template_9xg78ks', templateParams)
+        .then(function (response) {
+            console.log('SUCCESS!', response.status, response.text);
+            form.reset();
+            alert('Your message has been sent successfully!');
+        }, function (error) {
+            console.log('FAILED...', error);
+            alert('Sorry, your message was not able to be sent. Please try again later.');
+        });
 }
