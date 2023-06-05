@@ -284,6 +284,25 @@ ul {
   border: 1px solid red;
   color: #fff; }
 
+.notification-toast {
+  width: 500px;
+  height: 50px;
+  background-color: green;
+  z-index: 5000;
+  position: fixed;
+  left: 50%;
+  transform: translate(-50%, 0);
+  top: 10%;
+  border-radius: 4px;
+  display: none;
+  opacity: 0; }
+
+.notification-text {
+  color: white;
+  font-size: 1.75rem;
+  text-align: center;
+  margin-top: 1.35rem; }
+
 .header {
   background-image: linear-gradient(to bottom, transparent, #060521), url(../img/jr-korpa-9XngoIpxcEo-unsplash.jpg);
   background-size: cover;

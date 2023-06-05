@@ -102,9 +102,26 @@ function sendEmail(name, subject, email, message) {
         .then(function (response) {
             console.log('SUCCESS!', response.status, response.text);
             form.reset();
-            alert('Your message has been sent successfully!');
+            const popup = document.getElementById('notification-popup');
+            const text = document.getElementById('notification-text-message');
+            // NEED TO ADD ANIMATION TO THIS. 
+            popup.style.display = 'block';
+            popup.style.opacity = 1;
+            popup.style.backgroundColor = 'green';
+            text.innerText = 'Your message has been sent successfully!';
+            setTimeout(() => {
+                popup.style.display = 'none';
+                popup.style.opacity = 0;
+            }, 3000);
         }, function (error) {
             console.log('FAILED...', error);
-            alert('Sorry, your message was not able to be sent. Please try again later.');
+            popup.style.display = 'block';
+            popup.style.opacity = 1;
+            popup.style.backgroundColor = 'red';
+            text.innerText = 'Sorry, your message was not able to be sent. Please try again later.';
+            setTimeout(() => {
+                popup.style.display = 'none';
+                popup.style.opacity = 0;
+            }, 3000);
         });
 }
