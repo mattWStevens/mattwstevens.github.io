@@ -14,6 +14,16 @@
         align-items: center;
         background-color: rgba($color-muted-cyan, .185);
 
+        &-bottom {
+            background-color: $color-violet;
+            font-size: 1.65rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: $color-white;
+            border: 1px solid $color-white;
+        }
+
         &:link,
         &:visited {
             color: cyan;
@@ -21,11 +31,16 @@
         }
     }
 
-    &--contact:hover {
-        background-color: rgba($color-violet, .185);
+    &--contact:hover,
+    &--contact-bottom:hover {
         color: $color-white;
         box-shadow: 0 1rem 2rem $color-black-pearl;
         transform: translateY(-2px);
+        cursor: pointer;
+    }
+
+    &--contact:hover {
+        background-color: rgba($color-violet, .185);
     }
 
     &--contact:hover > .code-icon {

@@ -9,17 +9,30 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="main.js"></script>
 
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("yl4i8II18m6BPzxvR");
+        })();
+    </script>
+
     <title>Matthew Stevens</title>
 </head>
 
 <body class="container">
+    <div class="notification-toast" id="notification-popup">
+        <div class="notification-text" id="notification-text-message">
+            Your message has been sent successfully!
+        </div>
+    </div>
     <nav class="nav-container">
         <ion-icon name="hardware-chip-outline" class="nav-container__icon"></ion-icon>
         <ul class="nav">
             <li class="nav__item"><a href="#about_me" class="nav__link nav__link--text">About Me</a></li>
             <li class="nav__item"><a href="#experience" class="nav__link nav__link--text">Experience</a></li>
             <li class="nav__item"><a href="#projects" class="nav__link nav__link--text">Projects</a></li>
-            <li class="nav__item"><a href="#" class="nav__link nav__link--text">Contact Me</a></li>
+            <li class="nav__item"><a href="#contact" class="nav__link nav__link--text">Contact Me</a></li>
             <li class="nav__item nav__item--resume">
                 <a href="Stevens_Resume_update.pdf" class="nav__link" target="_blank">Resume</a>
             </li>
@@ -39,7 +52,7 @@
             <ion-icon name="logo-python" class="skill-icon"></ion-icon>
         </div>
         <div class="contact-btn-container u-margin-top-medium">
-            <a href="#" class="btn btn--contact">
+            <a href="#contact" class="btn btn--contact">
                 <ion-icon name="code-outline" class="code-icon"></ion-icon>
                 Contact Me
                 <ion-icon name="code-slash-outline" class="code-icon"></ion-icon>
@@ -87,8 +100,8 @@
                             Implemented numerous Java Springboot micro services from start to finish - including setting
                             up the initial repositories, implementing the business logic (after having reverse
                             engineered it from the old service's BPEL logic), adding unit tests, performance tests,
-                            regression tests, logging, configuring the CI/CD pipelines for the applications, and ultimately
-                            deploying them on OpenShift 4
+                            regression tests, logging, configuring the CI/CD pipelines for the applications, and
+                            ultimately deploying them on OpenShift 4
                         </li>
                         <li>
                             Worked to continuously improve as well as maintain the existing microservices through
@@ -321,7 +334,70 @@
         </div>
     </div>
     </div>
-    <footer class="contact">Contact</footer>
+    <footer class="contact" id="contact">
+        <div class="contact__container">
+            <div class="contact__title-info">
+                <h2 class="heading--2">Contact Me</h2>
+                <h3 class="heading--3 u-margin-top-medium" style="color: cyan">Let's Connect.</h3>
+                <div class="contact__info u-margin-top-small">
+                    <a href="mailto:mwstevens0708@gmail.com" class="contact__info-item">
+                        <ion-icon name="mail-outline" class="contact-icon"></ion-icon>
+                        mwstevens0708@gmail.com
+                    </a>
+                    <a href="https://www.linkedin.com/in/matthew-stevens-17b27716a/" target="_blank"
+                        class="contact__info-item">
+                        <ion-icon name="logo-linkedin" class="contact-icon"></ion-icon>
+                        LinkedIn
+                    </a>
+                    <a href="tel:8604169151" class="contact__info-item">
+                        <ion-icon name="call-outline" class="contact-icon"></ion-icon>
+                        (860) 416 - 9151
+                    </a>
+                    <a href="https://github.com/mattWStevens" target="_blank" class="contact__info-item">
+                        <ion-icon name="logo-github" class="contact-icon"></ion-icon>
+                        GitHub
+                    </a>
+                </div>
+            </div>
+            <div class="contact__form">
+                <form id="ContactForm">
+                    <label for="name" class="contact__form-label">Name</label>
+                    <div class="contact__form-input-container">
+                        <ion-icon name="person-circle-outline" class="input-icon"></ion-icon>
+                        <input type="text" id="name" name="name" class="contact__form-input"
+                            oninput="handleSubmit('name')">
+                    </div>
+
+                    <label for="email" class="contact__form-label">Email</label>
+                    <div class="contact__form-input-container">
+                        <ion-icon name="mail-outline" class="input-icon"></ion-icon>
+                        <input type="text" id="email" name="email" class="contact__form-input"
+                            onchange="handleSubmit('email')">
+                    </div>
+
+                    <label for="subject" class="contact__form-label">Subject</label>
+                    <div class="contact__form-input-container">
+                        <ion-icon name="text-outline" class="input-icon"></ion-icon>
+                        <input type="text" id="subject" name="subject" class="contact__form-input"
+                            oninput="handleSubmit('subject')">
+                    </div>
+
+                    <label for="message" class="contact__form-label">Message</label>
+                    <div class="contact__form-input-container">
+                        <ion-icon name="chatbox-ellipses-outline" class="input-icon"></ion-icon>
+                        <textarea name="message" id="message" cols="40" rows="5" class="contact__form-input"
+                            oninput="handleSubmit('message')"></textarea>
+                    </div>
+                </form>
+
+                <button class="btn btn--contact-bottom" onclick="handleSubmit()">
+                    <ion-icon name="code-outline" class="code-icon" style="color: white"></ion-icon>
+                    Connect
+                    <ion-icon name="code-slash-outline" class="code-icon" style="color: white"></ion-icon>
+                </button>
+            </div>
+        </div>
+    </footer>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
