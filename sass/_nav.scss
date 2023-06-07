@@ -2,6 +2,9 @@
     background-color: rgba($color-black-pearl, .75);
     padding: .5rem .7rem;
     display: flex;
+    @media only screen and (max-width: $bp-small) {
+        align-items: flex-start;
+    }
     align-items: center;
     justify-content: space-between;
     position: fixed;
@@ -16,12 +19,25 @@
     &__icon:hover {
         color: $color-cerise;
     }
+
+    &__icon--mobile {
+        display: none;
+        @media only screen and (max-width: $bp-small) {
+            display: inline;
+        }
+    }
 }
 
 .nav {
     height: 100%;
     list-style: none;
     display: flex;
+    @media only screen and (max-width: $bp-small) {
+        flex-direction: column;
+        align-self: center;
+        display: none;
+        margin-top: 4rem;
+    }
     justify-content: flex-end;
     align-items: center;
     font-size: 1.75rem;  // TESTING ONLY REMOVE

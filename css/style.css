@@ -416,10 +416,18 @@ ul {
   top: 0;
   width: 100%;
   z-index: 1000; }
+  @media only screen and (max-width: 37.5em) {
+    .nav-container {
+      align-items: flex-start; } }
   .nav-container__icon {
     cursor: pointer; }
   .nav-container__icon:hover {
     color: #CF3176; }
+  .nav-container__icon--mobile {
+    display: none; }
+    @media only screen and (max-width: 37.5em) {
+      .nav-container__icon--mobile {
+        display: inline; } }
 
 .nav {
   height: 100%;
@@ -428,6 +436,12 @@ ul {
   justify-content: flex-end;
   align-items: center;
   font-size: 1.75rem; }
+  @media only screen and (max-width: 37.5em) {
+    .nav {
+      flex-direction: column;
+      align-self: center;
+      display: none;
+      margin-top: 4rem; } }
   .nav__item {
     margin: 1rem;
     overflow: hidden; }

@@ -130,3 +130,12 @@ function seeMore(item) {
     text.style.display = displayVal === 'none' ? 'block' : 'none';
     btn.innerText = displayVal === 'none' ? 'See Less' : 'See More';
 }
+
+function toggleMenu() {
+    const navItems = document.getElementsByClassName('nav')[0];
+    const menuButton = document.getElementsByClassName('nav-container__icon--mobile')[0];
+    const displayVal = navItems.style.display || 'none';
+    
+    menuButton.name = displayVal === 'none' ? 'close-outline' : 'menu-outline';
+    navItems.style.display = displayVal === 'none' ? 'flex' : 'none';
+}
