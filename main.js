@@ -120,3 +120,13 @@ function sendEmail(name, subject, email, message) {
             }, 3000);
         });
 }
+
+function seeMore(item) {
+    const btn = document.getElementById(`see-more-btn-${item}`);
+    const text = document.getElementById(`see-more-${item}`);
+
+    const displayVal = text.style.display;
+
+    text.style.display = displayVal === 'none' ? 'block' : 'none';
+    btn.innerText = displayVal === 'none' ? 'See Less' : 'See More';
+}

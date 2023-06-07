@@ -4,6 +4,9 @@
     color: $color-white;
 
     &__content {
+        @media only screen and (max-width: $bp-largest) {
+            height: unset;
+        }
         height: 50rem;
         display: flex;
         justify-content: space-between;
@@ -16,6 +19,9 @@
     }
 
     &__item {
+        @media only screen and (max-width: $bp-largest) {
+            height: unset;
+        }
         height: 100%;
         flex: 1;
         padding: 3rem;
@@ -48,6 +54,24 @@
     &__page-number {
         text-align: center;
         font-size: 2rem;
+    }
+}
+
+.experience-large {
+    @media only screen and (max-width: $bp-small) {
+        display: none;
+    }
+    @media only screen and (min-width: $bp-medium) {
+        display: block;
+    }
+}
+
+.experience-mobile {
+    @media only screen and (min-width: $bp-small) {
+        display: block;
+    }
+    @media only screen and (min-width: $bp-medium) {
+        display: none;
     }
 }
 
