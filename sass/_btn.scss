@@ -46,4 +46,18 @@
     &--contact:hover > .code-icon {
         color: $color-white;
     }
+
+    &--see-more {
+        border: none;
+        background-color: transparent;
+        color: cyan;
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: bold;
+        margin-top: 1.5rem;
+        padding: 0;
+        &:hover {
+            border: none;
+            cursor: pointer;
+        }
+    }
 }

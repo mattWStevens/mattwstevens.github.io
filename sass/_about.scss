@@ -1,6 +1,9 @@
 .about {
     background-color: $color-black-pearl;
     display: flex;
+    @media only screen and (max-width: 785px) {
+        flex-direction: column;
+    }
 
     &__details {
         padding: 3rem;
@@ -8,9 +11,15 @@
         line-height: 1.8;
         width: 50%;
         color: $color-white;
+        @media only screen and (max-width: 785px) {
+            width: 100%;
+        }
     }
 
     &__img-container {
+        @media only screen and (max-width: $bp-large) {
+            margin-top: 5rem;
+        }
         flex: 1;
         position: relative;
 
@@ -24,6 +33,9 @@
             transition: background-color .75s;
             background-color: rgba($color-indigo, .6);
             box-shadow: 0 0 8px 8px $color-black-pearl inset;
+            @media only screen and (max-width: $bp-large) {
+                background-color: transparent;
+            }
 
             &:hover {
                 background-color: transparent;

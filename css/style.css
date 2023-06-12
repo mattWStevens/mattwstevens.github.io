@@ -62,15 +62,24 @@ ion-icon {
 .about {
   background-color: #060521;
   display: flex; }
+  @media only screen and (max-width: 785px) {
+    .about {
+      flex-direction: column; } }
   .about__details {
     padding: 3rem;
     font-size: 2rem;
     line-height: 1.8;
     width: 50%;
     color: #fff; }
+    @media only screen and (max-width: 785px) {
+      .about__details {
+        width: 100%; } }
   .about__img-container {
     flex: 1;
     position: relative; }
+    @media only screen and (max-width: 62.5em) {
+      .about__img-container {
+        margin-top: 5rem; } }
     .about__img-container__overlay {
       position: absolute;
       top: 0;
@@ -81,6 +90,9 @@ ion-icon {
       transition: background-color .75s;
       background-color: rgba(72, 15, 114, 0.6);
       box-shadow: 0 0 8px 8px #060521 inset; }
+      @media only screen and (max-width: 62.5em) {
+        .about__img-container__overlay {
+          background-color: transparent; } }
       .about__img-container__overlay:hover {
         background-color: transparent; }
   .about__personal-image {
@@ -120,6 +132,17 @@ ion-icon {
     background-color: rgba(143, 23, 126, 0.185); }
   .btn--contact:hover > .code-icon {
     color: #fff; }
+  .btn--see-more {
+    border: none;
+    background-color: transparent;
+    color: cyan;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    margin-top: 1.5rem;
+    padding: 0; }
+    .btn--see-more:hover {
+      border: none;
+      cursor: pointer; }
 
 .projects {
   background-color: #060521;
@@ -174,6 +197,9 @@ ion-icon {
     display: flex;
     justify-content: space-between;
     align-items: center; }
+    @media only screen and (max-width: 81.25em) {
+      .experience__content {
+        height: unset; } }
   .experience__button {
     background-color: transparent;
     border: none; }
@@ -185,6 +211,9 @@ ion-icon {
     border-radius: 4px;
     background: linear-gradient(to right, transparent 33%, #0cc7c7, transparent 66%);
     background-size: 300% 100%, cover; }
+    @media only screen and (max-width: 81.25em) {
+      .experience__item {
+        height: unset; } }
     .experience__item--1 {
       display: block; }
     .experience__item--2 {
@@ -198,6 +227,18 @@ ion-icon {
   .experience__page-number {
     text-align: center;
     font-size: 2rem; }
+
+@media only screen and (max-width: 50em) {
+  .experience-large {
+    display: none; } }
+
+@media only screen and (min-width: 37.5em) {
+  .experience-mobile {
+    display: block; } }
+
+@media only screen and (min-width: 801px) {
+  .experience-mobile {
+    display: none; } }
 
 .arrow-icon {
   padding: 2rem;
@@ -224,11 +265,17 @@ ul {
   color: #fff; }
   .contact__container {
     display: flex; }
+    @media only screen and (max-width: 62.5em) {
+      .contact__container {
+        flex-direction: column; } }
   .contact__title-info {
     display: flex;
     flex-direction: column;
     justify-content: center;
     flex: .5 auto; }
+    @media only screen and (max-width: 62.5em) {
+      .contact__title-info {
+        align-items: center; } }
   .contact__info {
     font-size: 2rem; }
   .contact__info-item, .contact__info-item:link, .contact__info-item:visited {
@@ -262,6 +309,9 @@ ul {
       width: 65%;
       padding-left: 3.75rem;
       display: block; }
+      @media only screen and (max-width: 62.5em) {
+        .contact__form-input {
+          width: 100%; } }
       .contact__form-input:focus {
         outline: none; }
 
@@ -362,10 +412,18 @@ ul {
   top: 0;
   width: 100%;
   z-index: 1000; }
+  @media only screen and (max-width: 37.5em) {
+    .nav-container {
+      align-items: flex-start; } }
   .nav-container__icon {
     cursor: pointer; }
   .nav-container__icon:hover {
     color: #CF3176; }
+  .nav-container__icon--mobile {
+    display: none; }
+    @media only screen and (max-width: 37.5em) {
+      .nav-container__icon--mobile {
+        display: inline; } }
 
 .nav {
   height: 100%;
@@ -374,6 +432,12 @@ ul {
   justify-content: flex-end;
   align-items: center;
   font-size: 1.75rem; }
+  @media only screen and (max-width: 37.5em) {
+    .nav {
+      flex-direction: column;
+      align-self: center;
+      display: none;
+      margin-top: 4rem; } }
   .nav__item {
     margin: 1rem;
     overflow: hidden; }
