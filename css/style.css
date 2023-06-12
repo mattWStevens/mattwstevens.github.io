@@ -62,7 +62,7 @@ ion-icon {
 .about {
   background-color: #060521;
   display: flex; }
-  @media only screen and (max-width: 37.5em) {
+  @media only screen and (max-width: 785px) {
     .about {
       flex-direction: column; } }
   .about__details {
@@ -71,7 +71,7 @@ ion-icon {
     line-height: 1.8;
     width: 50%;
     color: #fff; }
-    @media only screen and (max-width: 37.5em) {
+    @media only screen and (max-width: 785px) {
       .about__details {
         width: 100%; } }
   .about__img-container {
@@ -228,19 +228,15 @@ ion-icon {
     text-align: center;
     font-size: 2rem; }
 
-@media only screen and (max-width: 37.5em) {
+@media only screen and (max-width: 50em) {
   .experience-large {
     display: none; } }
-
-@media only screen and (min-width: 50em) {
-  .experience-large {
-    display: block; } }
 
 @media only screen and (min-width: 37.5em) {
   .experience-mobile {
     display: block; } }
 
-@media only screen and (min-width: 50em) {
+@media only screen and (min-width: 801px) {
   .experience-mobile {
     display: none; } }
 

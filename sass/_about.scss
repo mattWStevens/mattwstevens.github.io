@@ -1,7 +1,7 @@
 .about {
     background-color: $color-black-pearl;
     display: flex;
-    @media only screen and (max-width: $bp-small) {
+    @media only screen and (max-width: 785px) {
         flex-direction: column;
     }
 
@@ -11,7 +11,7 @@
         line-height: 1.8;
         width: 50%;
         color: $color-white;
-        @media only screen and (max-width: $bp-small) {
+        @media only screen and (max-width: 785px) {
             width: 100%;
         }
     }
