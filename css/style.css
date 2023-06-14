@@ -15,7 +15,9 @@ body {
 
 .container {
   display: grid;
-  grid-template-rows: min-content min-content; }
+  grid-template-rows: min-content min-content;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch; }
 
 ion-icon {
   color: white;
