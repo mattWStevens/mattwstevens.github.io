@@ -358,12 +358,11 @@ ul {
 .header {
   background-image: linear-gradient(to bottom, transparent, #060521), url(../img/jr-korpa-9XngoIpxcEo-unsplash.jpg);
   background-size: cover;
-  height: 100vh;
   padding-top: 5.5rem;
   text-align: center; }
-  @media (pointer: coarse) {
+  @media (pointer: fine) {
     .header {
-      height: auto; } }
+      height: 100vh; } }
 
 .contact-btn-container {
   display: flex;
