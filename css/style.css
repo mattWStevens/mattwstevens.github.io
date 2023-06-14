@@ -361,6 +361,9 @@ ul {
   height: 100vh;
   padding-top: 5.5rem;
   text-align: center; }
+  @media (pointer: coarse) {
+    .header {
+      height: auto; } }
 
 .contact-btn-container {
   display: flex;
