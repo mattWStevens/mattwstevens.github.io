@@ -4,6 +4,9 @@
         url(../img/jr-korpa-9XngoIpxcEo-unsplash.jpg);
     background-size: cover;
     // height: 600px;
+    @media (pointer:coarse) {
+        height: auto;
+    }
     height: 100vh;
     padding-top: 5.5rem;
     text-align: center;
