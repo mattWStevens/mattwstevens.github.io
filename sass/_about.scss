@@ -33,7 +33,7 @@
             transition: background-color .75s;
             background-color: rgba($color-indigo, .6);
             box-shadow: 0 0 8px 8px $color-black-pearl inset;
-            @media only screen and (max-width: $bp-large) {
+            @media (pointer:coarse) {
                 background-color: transparent;
             }
 
