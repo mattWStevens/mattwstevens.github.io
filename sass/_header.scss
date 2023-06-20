@@ -3,9 +3,11 @@
     background-image: linear-gradient(to bottom, transparent, $color-black-pearl),
         url(../img/jr-korpa-9XngoIpxcEo-unsplash.jpg);
     background-size: cover;
-    // height: 600px;
-    @media (pointer:fine) {
-        height: 100vh;
+    @media only screen and (orientation: landscape) {
+        height: 100vw;
+    }
+    @media only screen and (orientation: portrait) {
+    height: 100vh;
     }
     padding-top: 5.5rem;
     text-align: center;

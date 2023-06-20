@@ -360,7 +360,10 @@ ul {
   background-size: cover;
   padding-top: 5.5rem;
   text-align: center; }
-  @media (pointer: fine) {
+  @media only screen and (orientation: landscape) {
+    .header {
+      height: 100vw; } }
+  @media only screen and (orientation: portrait) {
     .header {
       height: 100vh; } }
 
