@@ -347,6 +347,7 @@ ul {
   top: 10%;
   border-radius: 4px;
   opacity: 0;
+  display: none;
   transition: opacity .5s ease-in; }
 
 .notification-text {
