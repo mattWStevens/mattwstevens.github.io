@@ -1,4 +1,5 @@
 let currExperienceItem = 1;
+let changed = false;
 
 function navigateExperience(direction) {
     // Update experience item.
@@ -147,7 +148,23 @@ function toggleMenu() {
     const navItems = document.getElementsByClassName('nav')[0];
     const menuButton = document.getElementsByClassName('nav-container__icon--mobile')[0];
     const displayVal = navItems.style.display || 'none';
-    
+
     menuButton.name = displayVal === 'none' ? 'close-outline' : 'menu-outline';
     navItems.style.display = displayVal === 'none' ? 'flex' : 'none';
 }
+
+window.addEventListener('resize', function (event) {
+    if (event.target.innerWidth > 600) {
+        const navItems = document.getElementsByClassName('nav')[0];
+        navItems.style.display = 'flex';
+        changed = false;
+    } else {
+        if (!changed) {
+            const navItems = document.getElementsByClassName('nav')[0];
+            const menuButton = document.getElementsByClassName('nav-container__icon--mobile')[0];
+            navItems.style.display = 'none'
+            menuButton.name = 'menu-outline';
+            changed = true;
+        }
+    }
+}, true);
