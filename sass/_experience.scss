@@ -61,6 +61,9 @@
     @media only screen and (max-width: $bp-medium) {
         display: none;
     }
+    @media (pointer: coarse) {
+        display: none;
+    }
 }
 
 .experience-mobile {
@@ -69,6 +72,9 @@
     }
     @media only screen and (min-width: 801px) {
         display: none;
+    }
+    @media (pointer: coarse) {
+        display: block;
     }
 }
 
