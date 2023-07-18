@@ -237,6 +237,10 @@ ion-icon {
   .experience-large {
     display: none; } }
 
+@media (pointer: coarse) {
+  .experience-large {
+    display: none; } }
+
 @media only screen and (min-width: 37.5em) {
   .experience-mobile {
     display: block; } }
@@ -244,6 +248,10 @@ ion-icon {
 @media only screen and (min-width: 801px) {
   .experience-mobile {
     display: none; } }
+
+@media (pointer: coarse) {
+  .experience-mobile {
+    display: block; } }
 
 .arrow-icon {
   padding: 2rem;
